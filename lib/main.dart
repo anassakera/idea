@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:idea/routes/app_routes.dart';
+import 'package:idea/screens/login/login_screen.dart';
 import 'package:idea/screens/splash/splash_screen.dart';
 import 'package:idea/screens/onboarding/onboarding_screen.dart';
 import 'package:idea/screens/account_type/account_type_screen.dart';
-import 'package:idea/screens/login/login_screen.dart';
 import 'package:idea/screens/register_student/register_student_screen.dart';
 import 'package:idea/screens/register_parent/register_parent_screen.dart';
 import 'package:idea/screens/forgot_password/forgot_password_screen.dart';

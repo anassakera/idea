@@ -39,6 +39,8 @@ dependencies:
   google_fonts: ^6.3.2
   animate_do: ^4.2.0
   intl: ^0.20.2
+  http: ^1.2.2
+  shared_preferences: ^2.3.4
 
 
 dev_dependencies:
