@@ -15,14 +15,11 @@ class OnboardingPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           // Placeholder for illustration
-          Container(
+          Image.asset(
+            content.image,
             height: 300,
             width: double.infinity,
-            decoration: BoxDecoration(
-              color: Colors.grey[200],
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: const Icon(Icons.image, size: 100, color: Colors.grey),
+            fit: BoxFit.contain,
           ),
           const SizedBox(height: 40),
           Text(

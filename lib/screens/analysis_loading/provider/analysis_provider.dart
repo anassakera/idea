@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:idea/routes/app_routes.dart';
 import 'dart:async';
 
 class AnalysisProvider extends ChangeNotifier {
@@ -24,16 +25,8 @@ class AnalysisProvider extends ChangeNotifier {
       } else {
         _timer?.cancel();
         _loadingText = 'Analysis Complete!';
-        notifyListeners();
-        // Navigate to Quiz Preview (Screen 11 - not implemented yet)
-        Future.delayed(const Duration(seconds: 1), () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('Analysis Complete! Ready for Quiz Preview.'),
-            ),
-          );
-          Navigator.pop(context); // Go back for now
-        });
+          // Navigate to Quiz Preview
+          Navigator.pushReplacementNamed(context, AppRoutes.quizPreview);
       }
     });
   }

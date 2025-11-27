@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:idea/routes/app_routes.dart';
 
 class SubjectsGrid extends StatelessWidget {
   const SubjectsGrid({super.key});
@@ -24,34 +25,40 @@ class SubjectsGrid extends StatelessWidget {
       ),
       itemCount: subjects.length,
       itemBuilder: (context, index) {
-        return Container(
-          padding: const EdgeInsets.all(15),
-          decoration: BoxDecoration(
-            color: subjects[index]['color'].withOpacity(0.1),
-            borderRadius: BorderRadius.circular(20),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(subjects[index]['icon'], color: subjects[index]['color']),
-              const SizedBox(height: 10),
-              Text(
-                subjects[index]['name'],
-                style: GoogleFonts.poppins(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
+        return GestureDetector(
+          onTap: () {
+            // Navigate to subject details for the selected subject
+            Navigator.pushNamed(context, AppRoutes.subjectDetails);
+          },
+          child: Container(
+            padding: const EdgeInsets.all(15),
+            decoration: BoxDecoration(
+              color: subjects[index]['color'].withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(subjects[index]['icon'], color: subjects[index]['color']),
+                const SizedBox(height: 10),
+                Text(
+                  subjects[index]['name'],
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
                 ),
-              ),
-              Text(
-                '5 Quizzes',
-                style: GoogleFonts.poppins(
-                  fontSize: 12,
-                  color: Colors.grey[600],
+                Text(
+                  '5 Quizzes',
+                  style: GoogleFonts.poppins(
+                    fontSize: 12,
+                    color: Colors.grey[600],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       },

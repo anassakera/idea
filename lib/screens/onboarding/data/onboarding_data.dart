@@ -15,18 +15,18 @@ List<OnboardingContent> onboardingContents = [
     title: 'Scan & Learn',
     description:
         'Upload your study materials and let AI extract questions and answers for you.',
-    image: 'assets/images/onboarding1.png', // Placeholder
+    image: 'assets/images/onboarding1.png',
   ),
   OnboardingContent(
     title: 'Smart Quizzes',
     description:
         'Generate personalized quizzes based on your documents to test your knowledge.',
-    image: 'assets/images/onboarding2.png', // Placeholder
+    image: 'assets/images/onboarding2.png',
   ),
   OnboardingContent(
     title: 'Track Progress',
     description:
         'Monitor your performance and improve your weak areas with detailed analytics.',
-    image: 'assets/images/onboarding3.png', // Placeholder
+    image: 'assets/images/onboarding3.png',
   ),
 ];

@@ -36,7 +36,7 @@ class WelcomeCard extends StatelessWidget {
                   'You have 3 quizzes pending today.',
                   style: GoogleFonts.poppins(
                     fontSize: 14,
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.white.withValues(alpha: 0.9),
                   ),
                 ),
               ],
@@ -45,7 +45,7 @@ class WelcomeCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               shape: BoxShape.circle,
             ),
             child: const Icon(Icons.auto_graph, color: Colors.white, size: 30),

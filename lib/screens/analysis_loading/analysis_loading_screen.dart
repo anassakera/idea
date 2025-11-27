@@ -27,7 +27,7 @@ class AnalysisLoadingScreen extends StatelessWidget {
                         height: 150,
                         width: 150,
                         decoration: BoxDecoration(
-                          color: Colors.blueAccent.withOpacity(0.1),
+                          color: Colors.blueAccent.withValues(alpha: 0.1),
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(

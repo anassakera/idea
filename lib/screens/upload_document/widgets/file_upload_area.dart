@@ -15,10 +15,10 @@ class FileUploadArea extends StatelessWidget {
         width: double.infinity,
         height: 200,
         decoration: BoxDecoration(
-          color: Colors.blueAccent.withOpacity(0.05),
+          color: Colors.blueAccent.withValues(alpha: 0.05),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: Colors.blueAccent.withOpacity(0.3),
+            color: Colors.blueAccent.withValues(alpha: 0.3),
             style: BorderStyle.solid,
             width: 2,
           ),

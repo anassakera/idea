@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 /// API Service for handling authentication-related API calls
 class ApiService {
   // Base URL for the API - Update this to your local server URL
-  static const String baseUrl = 'http://192.168.0.117/idea_APIs';
+  static const String baseUrl = 'http://192.168.0.104/idea_APIs';
 
   // API endpoints
   static const String loginEndpoint = '$baseUrl/auth/login.php';
