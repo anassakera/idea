@@ -24,7 +24,7 @@ class UploadSettingsForm extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             DropdownButtonFormField<String>(
-              value: provider.selectedSubject,
+              initialValue: provider.selectedSubject,
               items: provider.subjects.map((String subject) {
                 return DropdownMenuItem<String>(
                   value: subject,
@@ -55,7 +55,7 @@ class UploadSettingsForm extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             DropdownButtonFormField<String>(
-              value: provider.difficulty,
+              initialValue: provider.difficulty,
               items: provider.difficulties.map((String diff) {
                 return DropdownMenuItem<String>(value: diff, child: Text(diff));
               }).toList(),
