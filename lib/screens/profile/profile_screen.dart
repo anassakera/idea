@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:idea/routes/app_routes.dart';
 import '../../shared/widgets/custom_app_bar.dart';
 import 'provider/profile_provider.dart';
@@ -68,9 +69,16 @@ class ProfileScreen extends StatelessWidget {
                     "Logout",
                     style: TextStyle(color: Colors.redAccent),
                   ),
-                  onTap: () {
-                    // Handle logout
-                    Navigator.pushReplacementNamed(context, AppRoutes.login);
+                  onTap: () async {
+                    // Clear auth token from shared_preferences
+                    final prefs = await SharedPreferences.getInstance();
+                    await prefs.remove('auth_token');
+                    await prefs.remove('user_data');
+
+                    // Navigate to login
+                    if (context.mounted) {
+                      Navigator.pushReplacementNamed(context, AppRoutes.login);
+                    }
                   },
                 ),
               ],

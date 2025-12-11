@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 /// API Service for handling student registration API calls
 class RegisterStudentApiService {
   // Base URL for the API - Update this to match your server URL
-  static const String baseUrl = 'http://localhost/idea_APIs';
+  static const String baseUrl = 'http://192.168.0.101/idea_APIs';
 
   // API endpoints
   static const String registerEndpoint = '$baseUrl/auth/register.php';

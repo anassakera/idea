@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:idea/routes/app_routes.dart';
 import 'package:idea/screens/onboarding/data/onboarding_data.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OnboardingProvider extends ChangeNotifier {
   int _currentIndex = 0;
@@ -28,8 +29,14 @@ class OnboardingProvider extends ChangeNotifier {
     finishOnboarding(context);
   }
 
-  void finishOnboarding(BuildContext context) {
+  Future<void> finishOnboarding(BuildContext context) async {
+    // Save onboarding completion status
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool('has_completed_onboarding', true);
+
     // Navigate to Account Type Selection
-    Navigator.pushReplacementNamed(context, AppRoutes.accountType);
+    if (context.mounted) {
+      Navigator.pushReplacementNamed(context, AppRoutes.accountType);
+    }
   }
 }
